@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "title": "Getting Started with React",
+        "category": "React",
+        "author": "Intesab",
+        "description": "Learn the basics of React and understand how components work."
+    },
+    {
+        "id": 2,
+        "title": "Introduction to JavaScript",
+        "category": "JavaScript",
+        "author": "Intesab",
+        "description": "A simple introduction to JavaScript and its important concepts."
+    },
+    {
+        "id": 3,
+        "title": "Learning HTML",
+        "category": "HTML",
+        "author": "Intesab",
+        "description": "Understand the basic structure of a webpage using HTML."
+    },
+    {
+        "id": 4,
+        "title": "CSS Basics for Beginners",
+        "category": "CSS",
+        "author": "Intesab",
+        "description": "Learn how CSS is used to style and design websites."
+    },
+    {
+        "id": 5,
+        "title": "React Components",
+        "category": "React",
+        "author": "Intesab",
+        "description": "Learn how to create and reuse components in React applications."
+    },
+    {
+        "id": 6,
+        "title": "JavaScript Array Methods",
+        "category": "JavaScript",
+        "author": "Intesab",
+        "description": "Learn some useful JavaScript methods for working with arrays."
+    }
+]
