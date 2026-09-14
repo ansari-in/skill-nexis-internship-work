@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Registration Form</title>
+    <style>
+        /*
+* Author: Ansari In
+*/
+
+        /* Background */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #11998e, #38ef7d);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Container */
+        .form-container {
+            width: 100%;
+            max-width: 450px;
+            padding: 20px;
+        }
+
+        /* Form Card */
+        .form-box {
+            background: #fff;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .form-box h2 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .form-box .subtitle {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        /* Input fields */
+        .input-group {
+            margin-bottom: 15px;
+            text-align: left;
+        }
+
+        .input-group input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            outline: none;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        .input-group input:focus {
+            border-color: #11998e;
+            box-shadow: 0px 0px 5px rgba(17, 153, 142, 0.5);
+        }
+
+        /* Error messages */
+        .error {
+            color: #e74c3c;
+            font-size: 13px;
+            margin-top: 4px;
+            display: block;
+        }
+
+        /* Button */
+        .btn-register {
+            width: 100%;
+            padding: 12px;
+            background: #11998e;
+            color: #fff;
+            font-size: 16px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .btn-register:hover {
+            background: #0f7a6f;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="form-container">
+        <div class="form-box">
+            <h2>Student Registration</h2>
+            <p class="subtitle">Fill in your details to register</p>
+            <form id="registrationForm" novalidate>
+                <div class="input-group">
+                    <input type="text" id="fullname" placeholder="Full Name" required />
+                    <small class="error"></small>
+                </div>
+
+                <div class="input-group">
+                    <input type="email" id="email" placeholder="Email Address" required />
+                    <small class="error"></small>
+                </div>
+
+                <div class="input-group">
+                    <input type="tel" id="phone" placeholder="Phone Number (10 digits)" required />
+                    <small class="error"></small>
+                </div>
+
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="Password (min 6 chars)" required />
+                    <small class="error"></small>
+                </div>
+
+                <div class="input-group">
+                    <input type="password" id="confirmPassword" placeholder="Confirm Password" required />
+                    <small class="error"></small>
+                </div>
+
+                <button type="submit" class="btn-register">Register</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('registrationForm');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+
+            let isValid = true;
+
+            // Full Name
+            const fullname = document.getElementById('fullname');
+            if (fullname.value.trim() === '') {
+                setError(fullname, 'Full name is required');
+                isValid = false;
+            } else {
+                clearError(fullname);
+            }
+
+            // Email
+            const email = document.getElementById('email');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email.value.trim())) {
+                setError(email, 'Enter a valid email');
+                isValid = false;
+            } else {
+                clearError(email);
+            }
+
+            // Phone
+            const phone = document.getElementById('phone');
+            const phoneRegex = /^[0-9]{10}$/;
+            if (!phoneRegex.test(phone.value.trim())) {
+                setError(phone, 'Enter a valid 10-digit phone number');
+                isValid = false;
+            } else {
+                clearError(phone);
+            }
+
+            // Password
+            const password = document.getElementById('password');
+            if (password.value.length < 6) {
+                setError(password, 'Password must be at least 6 characters');
+                isValid = false;
+            } else {
+                clearError(password);
+            }
+
+            // Confirm Password
+            const confirmPassword = document.getElementById('confirmPassword');
+            if (
+                confirmPassword.value !== password.value ||
+                confirmPassword.value === ''
+            ) {
+                setError(confirmPassword, 'Passwords do not match');
+                isValid = false;
+            } else {
+                clearError(confirmPassword);
+            }
+
+            if (isValid) {
+                alert('Registration Successful!');
+                form.reset();
+            }
+        });
+
+        function setError(input, message) {
+            const parent = input.parentElement;
+            const error = parent.querySelector('.error');
+            error.textContent = message;
+            input.style.borderColor = '#e74c3c';
+        }
+
+        function clearError(input) {
+            const parent = input.parentElement;
+            const error = parent.querySelector('.error');
+            error.textContent = '';
+            input.style.borderColor = '#ccc';
+        }
+    </script>
+</body>
+
+</html>

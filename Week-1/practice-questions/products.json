@@ -1,0 +1,60 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Smartphone — Nova X",
+      "category": "electronics",
+      "price": 12999,
+      "image": "https://via.placeholder.com/400x300?text=Smartphone"
+    },
+    {
+      "id": 2,
+      "title": "Men's Kurta Cotton",
+      "category": "fashion",
+      "price": 899,
+      "image": "https://via.placeholder.com/400x300?text=Kurta"
+    },
+    {
+      "id": 3,
+      "title": "LED TV 32 inch",
+      "category": "electronics",
+      "price": 15999,
+      "image": "https://via.placeholder.com/400x300?text=LED+TV"
+    },
+    {
+      "id": 4,
+      "title": "Non-Stick Cookware Set",
+      "category": "home",
+      "price": 2499,
+      "image": "https://via.placeholder.com/400x300?text=Cookware"
+    },
+    {
+      "id": 5,
+      "title": "Classic Novel Pack (3 books)",
+      "category": "books",
+      "price": 599,
+      "image": "https://via.placeholder.com/400x300?text=Books"
+    },
+    {
+      "id": 6,
+      "title": "Women's Ethnic Saree",
+      "category": "fashion",
+      "price": 1999,
+      "image": "https://via.placeholder.com/400x300?text=Saree"
+    },
+    {
+      "id": 7,
+      "title": "Bluetooth Headphones",
+      "category": "electronics",
+      "price": 2199,
+      "image": "https://via.placeholder.com/400x300?text=Headphones"
+    },
+    {
+      "id": 8,
+      "title": "Floor Lamp Modern",
+      "category": "home",
+      "price": 1299,
+      "image": "https://via.placeholder.com/400x300?text=Lamp"
+    }
+  ]
+}
