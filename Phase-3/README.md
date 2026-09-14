@@ -1,11 +1,35 @@
-# Assignment 1 - Full Stack Todo App
+# Phase 3 - Full-Stack Integration
 
-![db](assignment-1-Screenshots/db.jpg)
+This stage connects the frontend and backend into complete working applications.
 
-![login](assignment-1-Screenshots/login.jpg)
+The focus is on communication between React and Express, authentication, routing, protected pages and CRUD functionality.
 
-![register](assignment-1-Screenshots/register.jpg)
+## Full-Stack To-Do Application
 
-![key](assignment-1-Screenshots/secret-key.jpg)
+A complete To-Do application built by connecting the React frontend with the Express and MongoDB backend.
 
-![todos](assignment-1-Screenshots/todos.jpg)
+**Features:**
+
+- User registration
+- User login
+- JWT authentication
+- Protected routes
+- Add tasks
+- View tasks
+- Complete tasks
+- Delete tasks
+- MongoDB persistence
+- React Router
+- Context API
+- Form validation
+- Fetch API integration
+
+## Application Screenshots
+
+![Register](assignment-1-Screenshots/register.jpg)
+
+![Login](assignment-1-Screenshots/login.jpg)
+
+![Tasks](assignment-1-Screenshots/todos.jpg)
+
+![MongoDB](assignment-1-Screenshots/db.jpg)
